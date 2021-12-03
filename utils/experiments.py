@@ -116,10 +116,23 @@ class ExperimentArgumentParser(argparse.ArgumentParser):
 
         self.add_argument("command", metavar="command", default=list(self.COMMANDS.keys())[0], choices=self.COMMANDS.keys(),
                           help="Command. Must be one of:\n" + "\n".join([f"  {name}: {descr}" for name, descr in self.COMMANDS.items()]))
-        self.add_argument("-n", "--name", nargs="?", help="Name of the model to run/train/save.\nDefaults to the current date and time for "
-                                                          "'run' and 'train', while it's required by 'eval'.")
-        self.add_argument("-m", "--multi", nargs="?", const=10, type=int, help="Number of times the model will be run.\n"
-                                                                               "Defaults to 10 and only affects 'run'.")
+        self.add_argument(
+            "-n",
+            "--name",
+            nargs="?",
+            help="Name of the model to run/train/save.\nDefaults to the current date and time for 'run' and 'train', while it's required by 'eval'."
+        )
+        self.add_argument(
+            "-m",
+            "--multi",
+            nargs="?",
+            const=10,
+            type=int,
+            help="Number of times this experiment will run, providing average and standard deviation values for each metric in the end.\n"
+                 "If not specified the experiment will run only one time and no aggreagate metrics will be computed.\n"
+                 "If specified without a value, it will default to 10 times.\n"
+                 "This argument only affects the 'run' command."
+        )
 
     def parse_args(self, *args, **kwargs):
         args = super().parse_args(*args, **kwargs)
