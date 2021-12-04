@@ -233,7 +233,27 @@ TODO
 
 ### Experiment 07 - RTP-RGBD DMP
 
-TODO
+CNN model predicting full DMP weights of RTP using the RTP-RGBD dataset.
+
+Task: RTP
+
+Dataset: RTP-RGBD
+
+Input: RGB images from home position
+
+Output: full DMP weights of RTP trajectory
+
+Model: RGB image -> Encoder -> bottleneck image -> CNN -> DMP weights
+
+Optimizer: Adam
+
+Training loss: RMSE on DMP weights
+
+Metrics:
+- MSE on trajectory in joint space.
+- Euclidean distance on final trajectory point in cartesian space.
+
+Each region has its own test set, evaluated separately.
 
 ## WPP-RGB Experiments
 

@@ -34,3 +34,22 @@ def get_joint_loss(promp: ProMP):
         return loss
 
     return joint_loss
+
+
+def get_dmp_weight_loss(n_dmps, alpha=1):
+    """
+    Loss in weight space, as defined by Rok Pahic et al. (https://doi.org/10.1016/j.neunet.2020.04.010) eq. (4).
+
+    n_dmps: Number of dmps (corresponds to the number of degree of freedom).
+    alpha: Relative weight of the goal loss with respect to the weights loss.
+    """
+
+    def dmp_weight_loss(dmp_params_true, dmp_params_pred):
+        # dmp_params [(n_dmps+1)*n_bfs] = concatenate(dmp_weights [n_dmps*n_bfs], dmp_goal[n_dmps])
+        dmp_weights_true, dmp_goal_true = dmp_params_true[:, :-n_dmps], dmp_params_true[:, -n_dmps:]
+        dmp_weights_pred, dmp_goal_pred = dmp_params_pred[:, :-n_dmps], dmp_params_pred[:, -n_dmps:]
+
+        loss = tf.sqrt(tf.reduce_mean(tf.square(dmp_weights_true - dmp_weights_pred))) + alpha * tf.sqrt(tf.reduce_mean(tf.square(dmp_goal_true - dmp_goal_pred)))
+        return loss
+
+    return dmp_weight_loss
