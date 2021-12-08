@@ -1,6 +1,6 @@
-# Deep Probabilistic Movement Primitives: Toward breast cancer examination robot
+# Deep Movement Primitives: toward Breast Cancer Examination Robot
 
-This repository collects the code to run the experiments detailed in the paper "Deep Probabilistic Movement Primitives: Toward breast cancer examination robot".
+This repository collects the code to run the experiments detailed in the paper "Deep Movement Primitives: toward Breast Cancer Examination Robot".
 
 - [Deep Probabilistic Movement Primitives: Toward breast cancer examination robot](#deep-probabilistic-movement-primitives-toward-breast-cancer-examination-robot)
   - [ARTEMIS project](#artemis-project)
