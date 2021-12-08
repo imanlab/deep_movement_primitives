@@ -33,15 +33,15 @@ Early breast cancer detection has a significant impact on extending survival and
 
 1. Clone this repository on your local machine:
    ```
-   git clone git@github.com:imanlab/artemis_deep_promp.git
+   git clone git@github.com:imanlab/deep_movement_primitives.git
    ```
 2. Download the datasets from [here]() and extract them in the `data` folder. When you are done the `data` folder should contain the three `rtp-rgb`, `rtp-rgbd` and `wpp-rgb` folders. 
    <!-- TODO: add link to donwload the datasets. -->
 3. Create and activate a `conda` virtual environment with all the necessary packages detailed in the `conda_env.yaml` file. You can change the name to whatever you want:
    ```
-   cd /path/to/cloned/repo/artemis_deep_promp
-   conda env create -f conda_env.yaml -n "deep_promp"
-   conda activate "deep_promp"
+   cd /path/to/cloned/repo/deep_movement_primitives
+   conda env create -f conda_env.yaml -n "deep_movement_primitives"
+   conda activate "deep_movement_primitives"
    ```
 
 ### Running
@@ -59,7 +59,7 @@ Additional advanced options (e.g. train/evaluate only, run multiple times and ag
 ## Framework and tasks
 
 ProMPs (Probabilistic Movement Primitives [[1]](#ref-1)) are a probabilistic framework for Motion Primitives, which can encode a distribution of continuous trajectories as a distribution of discrete weights and a set of basis functions.  
-We introduced the concept of deep-ProMP, a learning from demonstrations framework, which can be used to map an input (e.g. an image) to the ProMP weights which encode a trajectory or a distribution of trajectories, effectively mapping the input to the trajectory.
+We introduced the concept of deep movement primitives, a learning from demonstrations framework, which can be used to map an input (e.g. an image) to the ProMP weights which encode a trajectory or a distribution of trajectories, effectively mapping the input to the trajectory.
 
 This framework was applied and tested on two tasks:
 
