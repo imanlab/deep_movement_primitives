@@ -2,7 +2,7 @@
 
 This repository collects the code to run the experiments detailed in the paper "Deep Movement Primitives: toward Breast Cancer Examination Robot".
 
-- [Deep Probabilistic Movement Primitives: Toward breast cancer examination robot](#deep-probabilistic-movement-primitives-toward-breast-cancer-examination-robot)
+- [Deep Movement Primitives: toward Breast Cancer Examination Robot](#deep-movement-primitives-toward-breast-cancer-examination-robot)
   - [ARTEMIS project](#artemis-project)
   - [Usage](#usage)
     - [Prerequisites](#prerequisites)
@@ -35,8 +35,7 @@ Early breast cancer detection has a significant impact on extending survival and
    ```
    git clone git@github.com:imanlab/deep_movement_primitives.git
    ```
-2. Download the datasets from [here]() and extract them in the `data` folder. When you are done the `data` folder should contain the three `rtp-rgb`, `rtp-rgbd` and `wpp-rgb` folders. 
-   <!-- TODO: add link to donwload the datasets. -->
+2. Download the datasets from [here](https://drive.google.com/drive/folders/1sSwIe5eejJDgYfWnbR3Qry-3qiGrWDWF?usp=sharing) and extract them in the `data` folder. When you are done the `data` folder should contain the three `rtp-rgb`, `rtp-rgbd` and `wpp-rgb` folders. 
 3. Create and activate a `conda` virtual environment with all the necessary packages detailed in the `conda_env.yaml` file. You can change the name to whatever you want:
    ```
    cd /path/to/cloned/repo/deep_movement_primitives
@@ -92,7 +91,9 @@ A complete documentation of all experiments with advanced instructions on how to
 
 ## Extra material
 
-A video presenting the models and some demonstrations on a real robot is available [here](). <!-- TODO: Add link to video demonstration. -->
+An appendix to the paper, with more details about data collection, experiments performed and results is available [here](https://drive.google.com/file/d/1YAH0DaaxCHeWeSMjllQ2VrezQZi8fxYl/view?usp=sharing).
+
+A video presenting the models and some demonstrations on a real robot is available [here](https://drive.google.com/file/d/10UWmW8u7PvaaNfOhe8dgzwW0QgVYxgVd/view?usp=sharing).
 
 ## References
 
